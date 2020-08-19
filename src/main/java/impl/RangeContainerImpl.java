@@ -84,6 +84,7 @@ public class RangeContainerImpl implements RangeContainer {
             }
         } catch (InterruptedException | ExecutionException e) {
             LOG.info("Task execution failed with Exception: " + e.getMessage());
+            return ids;
         }
         LOG.info("Were found " + ids.size() + " Ids");
         return ids;
